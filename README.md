@@ -14,8 +14,10 @@ Install the required packages with:
 Create a file "credentials.txt" in the project root repository with:
     CLIENT_KEY
     CLIENT_SECRET
+    user_name
 
 Where CLIENT_KEY and CLIENT_SECRET are your user keys. You can find those key at: https://developer.spotify.com/dashboard/
+To test, you can user the user_name "spotify"
 
 (those keys are yet not encoded, im planning on doing so in the near future)
 

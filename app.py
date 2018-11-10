@@ -15,7 +15,7 @@ def run():
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 
-    playlists = sp.user_playlists('druskus20')
+    playlists = sp.user_playlists(keys[2])
     while playlists:
         for i, playlist in enumerate(playlists['items']):
             print("%4d %s %s" % (i + 1 + playlists['offset'], playlist['uri'],  playlist['name']))
