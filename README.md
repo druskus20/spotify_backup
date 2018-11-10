@@ -17,7 +17,7 @@ Create a file "credentials.txt" in the project root repository with:<br />
     user_name<br />
 
 Where CLIENT_KEY and CLIENT_SECRET are your user keys. You can find those key at: https://developer.spotify.com/dashboard/<br />
-To test, you can user the user_name "spotify"<br />
+To test the program, you can use the user_name "spotify"<br />
 
 (those keys are yet not encoded, im planning on doing so in the near future)<br />
 
