@@ -5,7 +5,7 @@ This is a basic program written in Python (version 3.6) to generate a json file 
 It uses the Spotipy API and therefore the Spotify Web API
 https://github.com/plamere/spotipy
 
-##Setup:
+## Setup:
  
 You need Python 3.X to run this program.
 Install the required packages with: 
@@ -19,7 +19,7 @@ Where CLIENT_KEY and CLIENT_SECRET are your user keys. You can find those key at
 
 (those keys are yet not encoded, im planning on doing so in the near future)
 
-##Execution:
+## Execution:
 
 Run "$ python app.py"
 
