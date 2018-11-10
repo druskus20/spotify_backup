@@ -1,27 +1,27 @@
 # Spotify Playlist Exporter
 
-This is a basic program written in Python (version 3.6) to generate a json file with your playlists and songs data.
+This is a basic program written in Python (version 3.6) to generate a json file with your playlists and songs data.<br />
 
-It uses the Spotipy API and therefore the Spotify Web API
-https://github.com/plamere/spotipy
+It uses the Spotipy API and therefore the Spotify Web API<br />
+https://github.com/plamere/spotipy<br />
 
 ## Setup:
  
-You need Python 3.X to run this program.
-Install the required packages with: 
-    $ pip install -r requirements.txt
+You need Python 3.X to run this program.<br />
+Install the required packages with: <br />
+    $ pip install -r requirements.txt<br />
 
-Create a file "credentials.txt" in the project root repository with:
-    CLIENT_KEY
-    CLIENT_SECRET
-    user_name
+Create a file "credentials.txt" in the project root repository with:<br />
+    CLIENT_KEY<br />
+    CLIENT_SECRET<br />
+    user_name<br />
 
-Where CLIENT_KEY and CLIENT_SECRET are your user keys. You can find those key at: https://developer.spotify.com/dashboard/
-To test, you can user the user_name "spotify"
+Where CLIENT_KEY and CLIENT_SECRET are your user keys. You can find those key at: https://developer.spotify.com/dashboard/<br />
+To test the program, you can use the user_name "spotify"<br />
 
-(those keys are yet not encoded, im planning on doing so in the near future)
+(those keys are yet not encoded, im planning on doing so in the near future)<br />
 
 ## Execution:
 
-Run "$ python app.py"
+Run "$ python app.py"<br />
 
