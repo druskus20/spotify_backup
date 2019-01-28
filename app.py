@@ -8,7 +8,6 @@ def run():
     print(keys)
     os.environ['SPOTIPY_CLIENT_ID'] = keys[0]
     os.environ['SPOTIPY_CLIENT_SECRET'] = keys[1]
-    #os.environ['SPOTIPY_REDIRECT_URI'] = "http://127.0.0.1:8080/callback"
     username = keys[2]
 
     client_credentials_manager = SpotifyClientCredentials()
@@ -17,9 +16,8 @@ def run():
 
     playlists = sp.user_playlists(username)
     for playlist in playlists['items']:
-        print ()
         print (playlist['name'])
-        print ('  total tracks', playlist['tracks']['total'])
+        print ('total tracks', playlist['tracks']['total'])
         results = sp.user_playlist(username, playlist['id'],
             fields="tracks,next")
         tracks = results['tracks']
