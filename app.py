@@ -17,31 +17,36 @@ def run():
     output_file = open('output.out', 'w')
     output_file.write('{\n')
     playlists = sp.user_playlists(username)
+    output_file.write(' "playlists": [\n')
     for playlist in playlists['items']:
-        output_file.write(' "playlist": {\n')
-        output_file.write('  "name": %s\n' % playlist['name'])    
-        output_file.write('  "total tracks": %s\n' % playlist['tracks']['total'])    
+        output_file.write('  {\n')
+        output_file.write('   "name": "%s",\n' % playlist['name'])    
+        output_file.write('   "total tracks": "%s",\n' % playlist['tracks']['total'])    
         print ('PLAYLIST: ' + playlist['name'])
         print ('TOTAL TRACKS: ', playlist['tracks']['total'])
         results = sp.user_playlist(username, playlist['id'],
             fields="tracks,next")
-        output_file.write('  "tracks": [\n')    
+        output_file.write('   "tracks": [\n')    
         tracks = results['tracks']
         print_tracks(output_file, tracks)
        
         while tracks['next']:
             tracks = sp.next(tracks)   
             print_tracks(output_file, tracks)
-        output_file.write('   null\n')
-        output_file.write('  ]\n')
-        output_file.write(' }\n')
+        output_file.write('    null\n')
+        output_file.write('   ]\n')
+        if (playlist == playlists['items'][-1]):
+            break
+        output_file.write('  },\n')
+    output_file.write('  }\n')
+    output_file.write(' ]\n')
     output_file.write('}\n')
     output_file.close()
 
 def print_tracks(output_file, tracks):
     for item in tracks['items']:
         track = item['track']
-        output_file.write('   {"name": %s, "author": %s },\n' % (track['artists'][0]['name'], track['name']))
+        output_file.write('    {"name": "%s", "author": "%s"},\n' % (track['name'], track['artists'][0]['name'],))
         print ("%s - %s" % (track['artists'][0]['name'], track['name']))
 
 
