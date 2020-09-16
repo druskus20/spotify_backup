@@ -1,4 +1,4 @@
-# Spotify Playlist Exporter
+# Spotify Backup
 
 This is a basic program written in Python that generate a json file from your Spotify playlists .<br />
 
